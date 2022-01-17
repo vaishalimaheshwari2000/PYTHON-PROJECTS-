@@ -1,0 +1,17 @@
+import pygame
+from time import sleep
+pygame.init()
+window = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
+pygame.mixer.init()
+pygame.mixer.music.load('0136. Sunset - AShamaluevMusic.mp3')
+pygame.mixer.music.play()
+sleep(5)
+pygame.mixer.music.load('Horror Background Music (1).mp3')
+pygame.mixer.music.play()
+image = pygame.image.load('images (1).jpg')
+image = pygame.transform.scale(image,(1220,1000))
+rect = image.get_rect()
+rect = rect.move((0,0))
+window.blit(image,rect)
+pygame.display.update()
+sleep(4)
